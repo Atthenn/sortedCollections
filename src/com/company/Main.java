@@ -59,6 +59,16 @@ public class Main {
 
         System.out.println(stockList);
 
+        //gives error because of unmodifiable list
+        //temp =  new StockItem("pen", 1.12);
+        //stockList.Items().put(temp.getName(),temp);
+
+        stockList.Items().get("car").adjustStock(2000);
+        stockList.get("car").adjustStock(-1000);
+        System.out.println(stockList);
+
+
+
     }
     public static int sellItem(Basket basket, String item, int quantity){
 
